@@ -33174,7 +33174,9 @@ if (false) {} else {
 
 var map = {
 	"./Init/index.js": "./resources/js/Pages/Init/index.js",
-	"./Route/index.js": "./resources/js/Pages/Route/index.js"
+	"./Route/index.js": "./resources/js/Pages/Route/index.js",
+	"./Users/List/index.js": "./resources/js/Pages/Users/List/index.js",
+	"./Users/Show/index.js": "./resources/js/Pages/Users/Show/index.js"
 };
 
 
@@ -33250,6 +33252,54 @@ var Route = function Route() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Route);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Users/List/index.js":
+/*!************************************************!*\
+  !*** ./resources/js/Pages/Users/List/index.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var List = function List(_ref) {
+  var users = _ref.users;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Lista de usu\xE1rios"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, users.map(function (user) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: user.id
+    }, user.name);
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (List);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Users/Show/index.js":
+/*!************************************************!*\
+  !*** ./resources/js/Pages/Users/Show/index.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Show = function Show(_ref) {
+  var user = _ref.user;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Usu\xE1rio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, user.name));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Show);
 
 /***/ }),
 
