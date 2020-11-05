@@ -33165,16 +33165,16 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./resources/js/Pages sync recursive ^\\.\\/.*$":
-/*!******************************************!*\
-  !*** ./resources/js/Pages sync ^\.\/.*$ ***!
-  \******************************************/
+/***/ "./resources/js/Pages sync recursive ^\\.\\/.*\\/index\\.js$":
+/*!*****************************************************!*\
+  !*** ./resources/js/Pages sync ^\.\/.*\/index\.js$ ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./InitComponent": "./resources/js/Pages/InitComponent.js",
-	"./InitComponent.js": "./resources/js/Pages/InitComponent.js"
+	"./Init/index.js": "./resources/js/Pages/Init/index.js",
+	"./Route/index.js": "./resources/js/Pages/Route/index.js"
 };
 
 
@@ -33195,14 +33195,14 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = "./resources/js/Pages sync recursive ^\\.\\/.*$";
+webpackContext.id = "./resources/js/Pages sync recursive ^\\.\\/.*\\/index\\.js$";
 
 /***/ }),
 
-/***/ "./resources/js/Pages/InitComponent.js":
-/*!*********************************************!*\
-  !*** ./resources/js/Pages/InitComponent.js ***!
-  \*********************************************/
+/***/ "./resources/js/Pages/Init/index.js":
+/*!******************************************!*\
+  !*** ./resources/js/Pages/Init/index.js ***!
+  \******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -33210,14 +33210,46 @@ webpackContext.id = "./resources/js/Pages sync recursive ^\\.\\/.*$";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 var InitComponent = function InitComponent(_ref) {
-  var name = _ref.name;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Hello from component INIT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Meu parametro \xE9 ", name));
+  var name = _ref.name,
+      url_route = _ref.url_route;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Hello from component INIT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Meu parametro \xE9 ", name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
+    href: route('my-first-route')
+  }, "Ir para componente ROUTE"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (InitComponent);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Route/index.js":
+/*!*******************************************!*\
+  !*** ./resources/js/Pages/Route/index.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Route = function Route() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Hello from component ROUTE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
+    href: route('home')
+  }, "Voltar para HOME"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Route);
 
 /***/ }),
 
@@ -33243,7 +33275,7 @@ var el = document.getElementById('app');
 Object(react_dom__WEBPACK_IMPORTED_MODULE_2__["render"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__["App"], {
   initialPage: JSON.parse(el.dataset.page),
   resolveComponent: function resolveComponent(name) {
-    return __webpack_require__("./resources/js/Pages sync recursive ^\\.\\/.*$")("./".concat(name))["default"];
+    return __webpack_require__("./resources/js/Pages sync recursive ^\\.\\/.*\\/index\\.js$")("./".concat(name, "/index.js"))["default"];
   }
 }), el);
 

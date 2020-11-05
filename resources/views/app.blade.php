@@ -7,6 +7,12 @@
     <script src="{{ mix('/js/app.js') }}" defer></script>
   </head>
   <body>
-    @inertia
+        @routes
+        @inertia
+
+        <script>
+            // console.log(Ziggy.namedRoutes)
+            // console.log(route('my-first-route'))
+        </script>
   </body>
 </html>
