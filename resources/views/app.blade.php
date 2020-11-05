@@ -8,6 +8,21 @@
   </head>
   <body>
         @routes
+
+        @if($page['props']['title'])
+
+            {{ $page['props']['title'] }}
+
+        @endif
+
+        <br>
+
+        @if($onlyView)
+
+            {{ $onlyView }}
+
+        @endif
+
         @inertia
 
         <script>
