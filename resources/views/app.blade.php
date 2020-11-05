@@ -7,9 +7,20 @@
     <script src="{{ mix('/js/app.js') }}" defer></script>
   </head>
   <body>
+
+        {{--
+
+        @php
+            $names = ["Thiago", "Luiz", "Leonan", "Wesley"];
+        @endphp
+
+        {{ $names[rand(0, 3)] }}
+
+        --}}
+
         @routes
 
-        @if($page['props']['title'])
+        {{-- @if($page['props']['title'])
 
             {{ $page['props']['title'] }}
 
@@ -21,7 +32,7 @@
 
             {{ $onlyView }}
 
-        @endif
+        @endif --}}
 
         @inertia
 

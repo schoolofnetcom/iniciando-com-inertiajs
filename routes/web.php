@@ -5,11 +5,20 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    return Inertia::render('Init', [
-        "name" => "Wesley",
-        "url_route" => \URL::route('my-first-route')
-    ]);
-})->name('home');
+    return Inertia::render('Layout', [ "title" => "Root Page" ]);
+})->name('root');
+
+Route::get('/home', function () {
+    return Inertia::render('Home', [ "title" => "Home Page" ]);
+})->name('page.home');
+
+Route::get('/about', function () {
+    return Inertia::render('About', [ "title" => "About Page" ]);
+})->name('page.about');
+
+Route::get('/contact', function () {
+    return Inertia::render('Contact', [ "title" => "Contact Page" ]);
+})->name('page.contact');
 
 Route::get('/route', function () {
     return Inertia::render('Route', []);
