@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Inertia\Middleware;
+use App\Models\User;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -38,10 +39,10 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request)
     {
+        $user = User::find(2)->first();
         return array_merge(parent::share($request), [
-            // 'errors' => ($request->session()->get('errors')
-            //     ? $request->session()->get('errors')->getBag('default')->getMessages()
-            //     : (object) [])
+            'loggedUser' => $user,
+            'onlineUsers' => 200
         ]);
     }
 }

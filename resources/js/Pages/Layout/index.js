@@ -1,20 +1,29 @@
 import React, { useEffect } from 'react'
-import { InertiaLink } from '@inertiajs/inertia-react'
+import { InertiaLink, usePage } from '@inertiajs/inertia-react'
 
 export default function Layout({ title, children }) {
-  useEffect(() => {
+    useEffect(() => {
     document.title = title;
-  }, [title])
+    }, [title])
 
-  return (
-    <main>
-      <header>
-        <InertiaLink href={route('page.home')}>Home | </InertiaLink>
-        <InertiaLink href={route('page.about')}>About | </InertiaLink>
-        <InertiaLink href={route('page.contact')}>Contact</InertiaLink>
-      </header>
+    const { loggedUser, onlineUsers } = usePage().props;
+    // console.log(usePage().props);
 
-      <article>{children}</article>
-    </main>
-  )
+    return (
+        <main>
+            <header>
+                <div>Olá {loggedUser.name }</div>
+                <div>Usuários online {onlineUsers}</div>
+                <nav>
+                    <InertiaLink href={route('page.home')}>Home | </InertiaLink>
+                    <InertiaLink href={route('page.about')}>About | </InertiaLink>
+                    <InertiaLink href={route('page.contact')}>Contact</InertiaLink>
+                </nav>
+            </header>
+
+            <article>
+                {children}
+            </article>
+        </main>
+    )
 }
