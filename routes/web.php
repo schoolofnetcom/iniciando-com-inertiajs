@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\LinksController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -25,3 +26,9 @@ Route::get('/route', function () {
 })->name('my-first-route');
 
 Route::resource('users', UsersController::class);
+
+Route::get('aula-links', function(){
+    return Inertia::render('Link', []);
+});
+
+Route::resource('links', LinksController::class);

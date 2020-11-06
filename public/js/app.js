@@ -33178,6 +33178,7 @@ var map = {
 	"./Home/index.js": "./resources/js/Pages/Home/index.js",
 	"./Init/index.js": "./resources/js/Pages/Init/index.js",
 	"./Layout/index.js": "./resources/js/Pages/Layout/index.js",
+	"./Link/index.js": "./resources/js/Pages/Link/index.js",
 	"./Route/index.js": "./resources/js/Pages/Route/index.js",
 	"./Users/List/index.js": "./resources/js/Pages/Users/List/index.js",
 	"./Users/Show/index.js": "./resources/js/Pages/Users/Show/index.js"
@@ -33341,6 +33342,63 @@ function Layout(_ref) {
     href: route('page.contact')
   }, "Contact")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, children));
 }
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Link/index.js":
+/*!******************************************!*\
+  !*** ./resources/js/Pages/Link/index.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Link = function Link() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Trabalhando com Links"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
+    href: route('links.index')
+  }, "INDEX | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
+    href: route('links.create')
+  }, "CREATE | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
+    href: route('links.edit', {
+      id: 1
+    })
+  }, "EDIT | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
+    href: route('links.show', {
+      id: 1
+    })
+  }, "SHOW | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
+    href: route('links.update', {
+      id: 1
+    }),
+    method: "patch"
+  }, "UPDATE | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
+    href: route('links.destroy', {
+      id: 1
+    }),
+    method: "delete"
+  }, "DELETE | "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
+    href: route('links.store'),
+    method: "post",
+    data: {
+      name: "Thiago",
+      email: "thiago@email.com"
+    },
+    headers: {
+      SON: "ddfojdfhudfd121332fodfddf"
+    },
+    as: "button"
+  }, "STORE |"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Link);
 
 /***/ }),
 
