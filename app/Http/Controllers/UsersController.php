@@ -67,11 +67,9 @@ class UsersController extends Controller
         return \Redirect::route('users.index');
     }
 
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        return [
-            'action' => 'destroy',
-            'method' => 'delete'
-        ];
+        $user->delete();
+        return \Redirect::route('users.index');
     }
 }

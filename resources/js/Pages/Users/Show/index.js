@@ -5,6 +5,7 @@ const Show = ({user}) => {
         <div>
             <h1>Usuário</h1>
             <p>{ user.name }</p>
+            <p>{ user.email }</p>
         </div>
     );
 }

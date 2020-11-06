@@ -18,8 +18,8 @@ export default function Create({errors}) {
   }
 
   function handleSubmit(e) {
-    e.preventDefault()
-    Inertia.post(route('users.store'), data, {preserveState: false})
+    e.preventDefault();
+    Inertia.post(route('users.store'), data);
   }
 
   return (

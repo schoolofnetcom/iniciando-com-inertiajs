@@ -19,7 +19,7 @@ export default function Create({user, errors}) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    Inertia.put(route('users.update', { id : user.id }), data, {preserveState:false})
+    Inertia.put(route('users.update', { id : user.id }), data)
   }
 
     return (
@@ -32,7 +32,7 @@ export default function Create({user, errors}) {
             <label htmlFor="email">Email:</label><br/>
             <input id="email" value={data.email} onChange={handleChange} /><br/>
             <label htmlFor="password">Senha:</label><br/>
-            <input id="password" value={data.password} onChange={handleChange} /><br/><br/>
+            <input id="password" onChange={handleChange} /><br/><br/>
             <button type="submit">Submit</button>
             </form>
         </>
