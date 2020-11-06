@@ -33181,7 +33181,8 @@ var map = {
 	"./Link/index.js": "./resources/js/Pages/Link/index.js",
 	"./Route/index.js": "./resources/js/Pages/Route/index.js",
 	"./Users/List/index.js": "./resources/js/Pages/Users/List/index.js",
-	"./Users/Show/index.js": "./resources/js/Pages/Users/Show/index.js"
+	"./Users/Show/index.js": "./resources/js/Pages/Users/Show/index.js",
+	"./Visit/index.js": "./resources/js/Pages/Visit/index.js"
 };
 
 
@@ -33473,6 +33474,62 @@ var Show = function Show(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Show);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Visit/index.js":
+/*!*******************************************!*\
+  !*** ./resources/js/Pages/Visit/index.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Visit = function Visit() {
+  function deletarLink(e) {
+    e.preventDefault(); // EVENTOS
+    // onBefore
+    // onStart
+    // onProgress
+    // onSuccess
+    // onCancel
+    // onFinish
+
+    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__["Inertia"]["delete"](route('links.destroy', {
+      id: 1
+    }), {
+      onBefore: function onBefore(visit) {
+        return confirm('Deseja realmente excluir este link?');
+      },
+      onFinish: function onFinish() {
+        console.log('finalizou o evento');
+      }
+    });
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Trabalhando com Inertia Visit"),
+  /*#__PURE__*/
+  // Inertia.visit(route('links.index'), {
+  //     method: 'get'
+  // })
+  // Inertia.get(route('links.index'), {}, {})
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    onClick: function onClick() {
+      return deletarLink(event);
+    }
+  }, "DELETE"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Visit);
 
 /***/ }),
 

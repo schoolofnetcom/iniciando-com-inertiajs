@@ -32,3 +32,8 @@ Route::get('aula-links', function(){
 });
 
 Route::resource('links', LinksController::class);
+
+
+Route::get('aula-visit', function(){
+    return Inertia::render('Visit', []);
+});
